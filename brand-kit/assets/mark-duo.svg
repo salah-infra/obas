@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OBAS mark — Two-tone O">
+  <!-- Left half cyan, right half violet: a continuous loop signalling end-to-end ownership -->
+  <path d="M32 14 A18 18 0 0 0 32 50" fill="none" stroke="#00DCFA" stroke-width="7" stroke-linecap="round"/>
+  <path d="M32 14 A18 18 0 0 1 32 50" fill="none" stroke="#7C5CFF" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="3.5" fill="#02E6F3"/>
+</svg>

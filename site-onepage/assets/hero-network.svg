@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520" role="img" aria-label="OBAS integrated network — strategy, technology, AI, and operations connected to one accountable core">
+  <defs>
+    <linearGradient id="hLoop" x1="120" y1="120" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DCFA"/>
+      <stop offset="0.55" stop-color="#02E6F3"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <radialGradient id="hGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#02E6F3" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#0261E9" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#0261E9" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .spin   { transform-origin: 260px 260px; animation: spin 70s linear infinite; }
+      .spin-r { transform-origin: 260px 260px; animation: spin 95s linear infinite reverse; }
+      .p1 { animation: pulse 3.0s ease-in-out infinite; }
+      .p2 { animation: pulse 3.8s ease-in-out infinite; }
+      .p3 { animation: pulse 4.6s ease-in-out infinite; }
+      @keyframes spin  { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .spin, .spin-r, .p1, .p2, .p3 { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- ambient core glow -->
+  <circle cx="260" cy="260" r="240" fill="url(#hGlow)"/>
+
+  <!-- orbit rings -->
+  <circle class="spin-r" cx="260" cy="260" r="222" fill="none" stroke="#18263c" stroke-width="1.5" stroke-dasharray="2 10"/>
+  <circle cx="260" cy="260" r="176" fill="none" stroke="#16314a" stroke-width="1"/>
+  <circle class="spin" cx="260" cy="260" r="176" fill="none" stroke="#00DCFA" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round" pathLength="100" stroke-dasharray="14 86"/>
+
+  <!-- connection lines from core to nodes -->
+  <g stroke="#1b3a57" stroke-width="1.5">
+    <line x1="260" y1="260" x2="407" y2="175"/>
+    <line x1="260" y1="260" x2="421" y2="392"/>
+    <line x1="260" y1="260" x2="150" y2="372"/>
+    <line x1="260" y1="260" x2="86"  y2="196"/>
+    <line x1="260" y1="260" x2="232" y2="96"/>
+    <line x1="260" y1="260" x2="372" y2="300"/>
+  </g>
+
+  <!-- satellite nodes -->
+  <g>
+    <circle class="p1" cx="407" cy="175" r="7" fill="#00DCFA"/>
+    <circle class="p2" cx="421" cy="392" r="6" fill="#7C5CFF"/>
+    <circle class="p3" cx="150" cy="372" r="7" fill="#02E6F3"/>
+    <circle class="p2" cx="86"  cy="196" r="6" fill="#7C5CFF"/>
+    <circle class="p1" cx="232" cy="96"  r="6" fill="#00DCFA"/>
+    <circle class="p3" cx="372" cy="300" r="5" fill="#02E6F3"/>
+  </g>
+
+  <!-- the OBAS loop core: open ring + forward node -->
+  <g>
+    <circle cx="260" cy="260" r="92" fill="#000915" fill-opacity="0.55"/>
+    <circle cx="260" cy="260" r="92" fill="none" stroke="url(#hLoop)" stroke-width="14"
+            stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 260 260)"/>
+    <circle cx="352" cy="260" r="11" fill="#7C5CFF"/>
+    <circle class="p1" cx="260" cy="260" r="6" fill="#02E6F3"/>
+  </g>
+</svg>

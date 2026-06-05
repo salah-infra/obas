@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OBAS favicon">
+  <defs>
+    <linearGradient id="obasFav" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DCFA"/>
+      <stop offset="0.55" stop-color="#02E6F3"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#000915"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="url(#obasFav)" stroke-width="6.5"
+          stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
+  <circle cx="48" cy="32" r="4" fill="#7C5CFF"/>
+</svg>

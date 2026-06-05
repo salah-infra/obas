@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OBAS mark — Forward">
+  <defs><linearGradient id="g3" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#00DCFA"/><stop offset="1" stop-color="#7C5CFF"/>
+  </linearGradient></defs>
+  <!-- Ring + forward play/motion triangle -->
+  <circle cx="32" cy="32" r="18" fill="none" stroke="url(#g3)" stroke-width="6.5" stroke-linecap="round" pathLength="100" stroke-dasharray="82 100" transform="rotate(120 32 32)"/>
+  <path d="M27 23 L43 32 L27 41 Z" fill="#02E6F3"/>
+</svg>

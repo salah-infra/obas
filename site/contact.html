@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — OBAS</title>
+  <meta name="description" content="Book a transformation briefing with OBAS. Tell us about your initiative — strategy, technology, AI, and operations under one accountable model." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.documentElement.classList.add('has-js');
+    try { var _t = localStorage.getItem('obas-theme'); if (_t === 'light') document.documentElement.classList.add('light'); var _p = localStorage.getItem('obas-palette'); if (_p) document.documentElement.setAttribute('data-palette', _p); var _f = localStorage.getItem('obas-font'); if (_f) document.documentElement.setAttribute('data-font', _f); } catch (e) {}
+    tailwind.config = { theme: { extend: { colors: {
+      navy: 'var(--surface)', 'navy-soft': 'var(--surface-2)', 'navy-line': 'var(--line)',
+      cyan: '#00DCFA', 'bright-cyan': '#02E6F3', royal: '#0261E9', violet: '#7C5CFF', muted: 'var(--muted)'
+    }, maxWidth: { container: '80rem' } } } }
+  </script>
+  <link rel="stylesheet" href="assets/obas.css" />
+</head>
+<body>
+  <header class="fixed inset-x-0 top-4 z-50 px-4">
+    <nav class="nav-glass mx-auto flex max-w-container items-center justify-between rounded-2xl px-4 py-3 md:px-6">
+      <a href="index.html" class="flex items-center gap-2" aria-label="OBAS home">
+        <svg class="logo-mark logo-draw h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs><linearGradient id="navGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#00DCFA"/><stop offset=".55" stop-color="#02E6F3"/><stop offset="1" stop-color="#7C5CFF"/>
+          </linearGradient></defs>
+          <circle class="ring" cx="32" cy="32" r="18" fill="none" stroke="url(#navGrad)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
+          <circle class="node" cx="50" cy="32" r="4.5" fill="#7C5CFF"/>
+        </svg>
+        <span class="display text-xl font-bold tracking-[0.18em] text-white">OBAS</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="services.html" class="text-sm text-muted hover:text-white transition-colors">Capabilities</a>
+        <a href="about.html" class="text-sm text-muted hover:text-white transition-colors">About</a>
+        <a href="case-studies.html" class="text-sm text-muted hover:text-white transition-colors">Case studies</a>
+        <button data-theme-toggle aria-label="Toggle light or dark theme" class="theme-toggle cursor-pointer">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary text-sm">Book a briefing</a>
+      </div>
+      <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="md:hidden text-white p-2 cursor-pointer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div data-nav-menu hidden class="nav-glass mx-auto mt-2 flex max-w-container flex-col gap-1 rounded-2xl p-4 md:hidden">
+      <a href="services.html" class="rounded-lg px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Capabilities</a>
+      <a href="about.html" class="rounded-lg px-3 py-2 text-muted hover:bg-white/5 hover:text-white">About</a>
+      <a href="case-studies.html" class="rounded-lg px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Case studies</a>
+      <div class="mt-2 flex gap-2">
+        <button data-theme-toggle aria-label="Toggle light or dark theme" class="theme-toggle cursor-pointer">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary mt-2 justify-center">Book a briefing</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="glow px-4 pt-36 pb-16 md:pt-44">
+      <div class="mx-auto max-w-container">
+        <p class="eyebrow mb-5">Contact</p>
+        <h1 class="display max-w-3xl text-4xl font-bold leading-[1.05] sm:text-6xl">Let's build what others <span class="grad-text">only plan</span>.</h1>
+        <p class="mt-6 max-w-2xl text-lg text-muted">Tell us about your initiative. We'll come back with how OBAS would design, build, operate, and transfer it.</p>
+      </div>
+    </section>
+
+    <section class="px-4 pb-24">
+      <div class="mx-auto grid max-w-container gap-10 lg:grid-cols-[1.4fr_1fr]">
+        <!-- FORM -->
+        <form class="card p-7 md:p-9" onsubmit="event.preventDefault(); this.querySelector('[data-sent]').hidden = false;">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <label for="name" class="text-sm font-medium text-white">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name"
+                class="rounded-lg border border-navy-line bg-navy px-3 py-2.5 text-white placeholder:text-gray-500 focus:border-cyan focus:outline-none" placeholder="Your full name" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="org" class="text-sm font-medium text-white">Organization</label>
+              <input id="org" name="organization" type="text" autocomplete="organization"
+                class="rounded-lg border border-navy-line bg-navy px-3 py-2.5 text-white placeholder:text-gray-500 focus:border-cyan focus:outline-none" placeholder="Company or entity" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-sm font-medium text-white">Work email</label>
+              <input id="email" name="email" type="email" required autocomplete="email"
+                class="rounded-lg border border-navy-line bg-navy px-3 py-2.5 text-white placeholder:text-gray-500 focus:border-cyan focus:outline-none" placeholder="you@organization.com" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="sector" class="text-sm font-medium text-white">Sector</label>
+              <select id="sector" name="sector"
+                class="rounded-lg border border-navy-line bg-navy px-3 py-2.5 text-white focus:border-cyan focus:outline-none">
+                <option>Government & Public Sector</option>
+                <option>Financial Services & FinTech</option>
+                <option>Telecom & Digital Infrastructure</option>
+                <option>Energy & Utilities</option>
+                <option>Enterprise & Industry</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-5 flex flex-col gap-2">
+            <label for="message" class="text-sm font-medium text-white">Your initiative</label>
+            <textarea id="message" name="message" rows="5" required
+              class="rounded-lg border border-navy-line bg-navy px-3 py-2.5 text-white placeholder:text-gray-500 focus:border-cyan focus:outline-none" placeholder="What are you trying to transform?"></textarea>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <button type="submit" class="btn btn-primary">Send brief
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a href="mailto:hello@obas.com" class="btn btn-ghost">Book a call</a>
+            <p data-sent hidden class="text-sm text-cyan">Thanks — your brief is ready to send. Connect this form to your endpoint to deliver it.</p>
+          </div>
+        </form>
+
+        <!-- DETAILS -->
+        <aside class="space-y-6">
+          <div class="card p-7">
+            <p class="eyebrow">Direct</p>
+            <ul class="mt-4 space-y-3 text-muted">
+              <li><span class="text-white">Email</span> · hello@obas.com</li>
+              <li><span class="text-white">Location</span> · Riyadh, Kingdom of Saudi Arabia</li>
+              <li><span class="text-white">Focus</span> · Regional, with deep roots in KSA</li>
+            </ul>
+          </div>
+          <div class="card p-7">
+            <p class="eyebrow">Sectors we serve</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a href="services.html" class="rounded-full border border-navy-line px-3 py-1 text-sm text-muted hover:border-cyan hover:text-cyan transition-colors">Government</a>
+              <a href="services.html" class="rounded-full border border-navy-line px-3 py-1 text-sm text-muted hover:border-cyan hover:text-cyan transition-colors">FinTech</a>
+              <a href="services.html" class="rounded-full border border-navy-line px-3 py-1 text-sm text-muted hover:border-cyan hover:text-cyan transition-colors">Telecom</a>
+              <a href="services.html" class="rounded-full border border-navy-line px-3 py-1 text-sm text-muted hover:border-cyan hover:text-cyan transition-colors">Energy</a>
+              <a href="services.html" class="rounded-full border border-navy-line px-3 py-1 text-sm text-muted hover:border-cyan hover:text-cyan transition-colors">Enterprise</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-navy-line px-4 py-12">
+    <div class="mx-auto flex max-w-container flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+      <div class="flex items-center gap-2"><img src="assets/logo-icon.svg" alt="" class="h-7 w-7" /><span class="display font-bold tracking-[0.18em] text-white">OBAS</span></div>
+      <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted">
+        <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="case-studies.html" class="hover:text-white transition-colors">Case studies</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+      <p class="text-sm text-muted">© <span data-year>2026</span> OBAS · Riyadh, KSA</p>
+    </div>
+  </footer>
+  <script src="assets/obas.js"></script>
+</body>
+</html>

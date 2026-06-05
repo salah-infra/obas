@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OBAS — Brand Kit · Logos, Business Card & Mockups</title>
+  <link rel="icon" href="assets/mark-loop.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Sora:wght@500;600;700&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    try {
+      var _p = localStorage.getItem('obas-kit-palette'); if (_p) document.documentElement.setAttribute('data-palette', _p);
+      var _t = localStorage.getItem('obas-kit-theme'); if (_t === 'light') document.documentElement.classList.add('light');
+      var _f = localStorage.getItem('obas-font'); if (_f) document.documentElement.setAttribute('data-font', _f);
+    } catch (e) {}
+  </script>
+  <style>
+    :root{
+      /* fonts (shared with the site via localStorage('obas-font')) */
+      --font-display:'Space Grotesk','Sora',system-ui,sans-serif;
+      --font-body:'Inter','Segoe UI',system-ui,sans-serif;
+      /* Electric (default) — accents drive both the UI and the logo marks */
+      --cyan:#00DCFA; --bright:#02E6F3; --violet:#7C5CFF; --royal:#0261E9;
+      --ink:#fff; --muted:#9DB2C9;
+      --navy: color-mix(in srgb, #000915, var(--cyan) 7%);
+      --navy-2: color-mix(in srgb, #0a1526, var(--cyan) 8%);
+      --line: color-mix(in srgb, #18263c, var(--cyan) 14%);
+      --mesh1: color-mix(in srgb, var(--bright) 10%, transparent);
+      --mesh2: color-mix(in srgb, var(--violet) 10%, transparent);
+      --dot: rgba(255,255,255,.035);
+      /* business card surface */
+      --card-bg:#000915; --card-border:#1b2c45; --card-ink:#fff; --card-sub:var(--muted);
+      --card-line2:#C9D6E5; --accent-ink:var(--cyan); --tray:#06101d;
+    }
+    :root[data-palette=blue]{--cyan:#4F8BFF;--bright:#6FB1FF;--violet:#7B6CF6;--royal:#2D5BD6;}
+    :root[data-palette=teal]{--cyan:#2DD4BF;--bright:#34E0D0;--violet:#38BDF8;--royal:#0EA5A5;}
+    :root[data-palette=neon]{--cyan:#00F5D4;--bright:#00E5FF;--violet:#C77DFF;--royal:#00B4D8;}
+    :root[data-palette=mono]{--cyan:#9FB2C9;--bright:#C3D0E0;--violet:#5E6E86;--royal:#64748B;}
+    :root[data-palette=warm]{--cyan:#E0A872;--bright:#F0C9A0;--violet:#B45309;--royal:#C2603F;}
+    :root[data-palette=sapphire]{--cyan:#4DA3FF;--bright:#79C0FF;--violet:#E2683A;--royal:#2563EB;}
+    :root[data-palette=citrus]{--cyan:#B6F23D;--bright:#D4FF6B;--violet:#E2620E;--royal:#6FB400;}
+    :root[data-palette=rose]{--cyan:#FF5C8A;--bright:#FF8FB0;--violet:#3B6FD4;--royal:#C9356B;}
+    :root[data-palette=aurora]{--cyan:#2EE6A6;--bright:#5BF0C0;--violet:#1583C9;--royal:#0E9F77;}
+    :root[data-palette=gold]{--cyan:#F4C04A;--bright:#FFD978;--violet:#6D5DF6;--royal:#C49A2E;}
+    :root[data-palette=grape]{--cyan:#A78BFA;--bright:#C4B5FD;--violet:#D6447F;--royal:#7C3AED;}
+
+    :root[data-font="sora"]    {--font-display:'Sora',sans-serif;        --font-body:'Inter',sans-serif;}
+    :root[data-font="outfit"]  {--font-display:'Outfit',sans-serif;      --font-body:'Outfit',sans-serif;}
+    :root[data-font="poppins"] {--font-display:'Poppins',sans-serif;     --font-body:'Poppins',sans-serif;}
+    :root[data-font="plex"]    {--font-display:'IBM Plex Sans',sans-serif;--font-body:'IBM Plex Sans',sans-serif;}
+    :root[data-font="manrope"] {--font-display:'Manrope',sans-serif;     --font-body:'Manrope',sans-serif;}
+
+    /* Light mode — page chrome only; the business card + dark icon tiles stay dark by design */
+    :root.light{
+      --navy: color-mix(in srgb, #EEF3F9, var(--cyan) 10%);
+      --navy-2:#ffffff;
+      --line: color-mix(in srgb, #D8E1ED, var(--cyan) 14%);
+      --ink:#0A1A2F; --muted:#46596F;
+      --dot: rgba(8,22,40,.05);
+      --mesh1: color-mix(in srgb, var(--bright) 16%, transparent);
+      --mesh2: color-mix(in srgb, var(--violet) 12%, transparent);
+      --card-bg:#ffffff; --card-border: color-mix(in srgb,#D8E1ED, var(--cyan) 12%);
+      --card-ink:#0A1A2F; --card-sub:#5b6e86; --card-line2:#33485f;
+      --accent-ink: color-mix(in srgb, var(--cyan), #001018 34%); --tray:#e9eef5;
+    }
+    :root.light .opt{background:#fff;box-shadow:0 1px 3px rgba(10,26,47,.06)}
+    :root.light .biz::before{opacity:.5}
+    :root.light .biz{box-shadow:0 24px 50px rgba(10,26,47,.18)}
+
+    *{box-sizing:border-box}
+    body{
+      margin:0; background-color:var(--navy); color:var(--muted);
+      font-family:var(--font-body); -webkit-font-smoothing:antialiased;
+      background-image:
+        radial-gradient(120% 70% at 50% -10%, var(--mesh1), transparent 55%),
+        radial-gradient(90% 60% at 100% 0%, var(--mesh2), transparent 55%),
+        radial-gradient(var(--dot) 1px, transparent 1.4px);
+      background-size:auto,auto,34px 34px; background-attachment:fixed;
+      transition:background-color .3s ease;
+    }
+    h1,h2,h3,.display{font-family:var(--font-display);color:var(--ink);letter-spacing:-.01em;margin:0}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+    header{padding:64px 0 26px}
+    .eyebrow{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:600;color:var(--cyan)}
+    h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;margin-top:14px}
+    .lead{margin-top:14px;max-width:660px;font-size:1.05rem;line-height:1.7}
+    .rule{width:56px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));margin:0 0 22px}
+    section{padding:42px 0;border-top:1px solid var(--line)}
+    .sec-h{font-size:1.6rem;font-weight:700}
+    .sub{margin-top:8px;max-width:660px}
+
+    /* Palette switcher */
+    .palettes{display:flex;align-items:center;gap:9px;margin-top:24px;flex-wrap:wrap}
+    .pl-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-right:4px}
+    .sw{width:44px;height:26px;border-radius:8px;border:1px solid var(--line);cursor:pointer;padding:0;
+        background:linear-gradient(120deg,var(--a),var(--b));transition:transform .15s,outline-color .15s}
+    .sw:hover{transform:translateY(-1px)}
+    .sw.selected{outline:2px solid var(--cyan);outline-offset:2px}
+
+    /* Inline marks */
+    svg.mk{display:block}
+    #mg .s1{stop-color:var(--cyan)} #mg .s2{stop-color:var(--bright)} #mg .s3{stop-color:var(--violet)}
+    .f-cyan{fill:var(--cyan)} .f-violet{fill:var(--violet)} .f-bright{fill:var(--bright)}
+    .st-cyan{stroke:var(--cyan)} .st-violet{stroke:var(--violet)} .st-bright{stroke:var(--bright)}
+    .st-faint{stroke:var(--line)}
+
+    /* Logo option grid */
+    .logos{margin-top:30px;display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+    .opt{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+    .opt:hover{border-color:color-mix(in srgb,var(--cyan) 45%,transparent);transform:translateY(-2px)}
+    .opt.selected{border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan),0 16px 40px color-mix(in srgb,var(--cyan) 12%,transparent)}
+    .opt .stage{display:flex;align-items:center;gap:16px;padding:34px 22px;background:radial-gradient(120% 120% at 30% 0%,color-mix(in srgb,var(--bright) 7%,transparent),transparent 60%)}
+    .opt .stage .mk{width:54px;height:54px;flex:none}
+    .opt .wm{font-family:var(--font-display);font-weight:700;font-size:1.9rem;letter-spacing:.16em;color:var(--ink)}
+    .opt .meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-top:1px solid var(--line)}
+    .opt .name{font-family:var(--font-display);color:var(--ink);font-weight:600}
+    .opt .concept{font-size:.82rem;color:var(--muted);margin-top:2px;max-width:200px}
+    .opt .light{width:54px;height:38px;border-radius:8px;background:#F4F7FB;display:flex;align-items:center;justify-content:center;flex:none}
+    .opt .light .mk{width:26px;height:26px}
+    .pill{display:inline-block;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+
+    /* Mark-in-context */
+    .context{margin-top:28px;display:flex;flex-wrap:wrap;gap:26px;align-items:flex-end}
+    .ctx{display:flex;flex-direction:column;align-items:center;gap:10px}
+    .ctx small{color:var(--muted);font-size:.78rem}
+    .favicon{width:32px;height:32px;border-radius:6px;background:var(--navy-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+    .favicon .mk{width:22px;height:22px}
+    .appicon{width:84px;height:84px;border-radius:20px;background:linear-gradient(160deg,var(--navy-2),var(--navy));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+    .appicon .mk{width:48px;height:48px}
+    .avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(160deg,var(--navy-2),var(--navy));border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+    .avatar .mk{width:46px;height:46px}
+    .onlight{width:84px;height:84px;border-radius:16px;background:#F4F7FB;display:flex;align-items:center;justify-content:center}
+    .onlight .mk{width:46px;height:46px}
+
+    /* Business card mockup */
+    .stage-cards{margin-top:30px;border:1px solid var(--line);border-radius:20px;padding:54px 24px;display:flex;gap:40px;flex-wrap:wrap;justify-content:center;
+      background:radial-gradient(90% 120% at 20% 0%,color-mix(in srgb,var(--violet) 12%,transparent),transparent 60%),radial-gradient(80% 120% at 100% 100%,color-mix(in srgb,var(--cyan) 12%,transparent),transparent 60%),var(--tray);
+      perspective:1600px}
+    .biz{width:420px;max-width:88vw;aspect-ratio:85/55;border-radius:14px;position:relative;overflow:hidden;color:var(--card-ink);
+      background:var(--card-bg);border:1px solid var(--card-border);box-shadow:0 30px 60px rgba(0,0,0,.5);
+      transform:rotateY(8deg) rotateX(4deg);transition:transform .4s}
+    .stage-cards:hover .biz.front{transform:rotateY(2deg) rotateX(1deg)}
+    .stage-cards:hover .biz.back{transform:rotateY(-2deg) rotateX(1deg)}
+    .biz.back{transform:rotateY(-8deg) rotateX(4deg)}
+    .biz::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 90% at 100% 0%,color-mix(in srgb,var(--violet) 32%,transparent),transparent 55%),radial-gradient(60% 80% at 0% 100%,color-mix(in srgb,var(--cyan) 18%,transparent),transparent 55%);pointer-events:none}
+    .biz .pad{position:absolute;inset:0;padding:30px 32px;display:flex;flex-direction:column}
+    .front .lockup{display:flex;align-items:center;gap:14px;margin-top:auto;margin-bottom:8px}
+    .front .lockup .mk{width:58px;height:58px}
+    .front .wm{font-family:var(--font-display);font-weight:700;font-size:2.4rem;letter-spacing:.12em;line-height:1}
+    .front .tag{font-size:.72rem;letter-spacing:.34em;color:var(--accent-ink);font-weight:600;margin:10px 0 auto}
+    .front .foot{display:flex;justify-content:space-between;font-size:.72rem;color:var(--card-sub);letter-spacing:.06em}
+    .back .top{display:flex;align-items:center;gap:10px}
+    .back .top .mk{width:30px;height:30px}
+    .back .top span{font-family:var(--font-display);font-weight:700;letter-spacing:.12em;font-size:1.1rem}
+    .back .who{margin-top:auto}
+    .back .nm{font-family:var(--font-display);color:var(--card-ink);font-weight:700;font-size:1.35rem}
+    .back .ti{color:var(--accent-ink);font-size:.82rem;font-weight:500;margin-top:2px}
+    .back .lines{margin-top:14px;display:grid;gap:5px;font-size:.78rem;color:var(--card-line2)}
+    .back .bot{margin-top:14px;font-size:.6rem;letter-spacing:.22em;color:var(--accent-ink);font-weight:600}
+    .back .bar{position:absolute;top:30px;bottom:30px;left:0;width:4px;border-radius:2px;background:linear-gradient(180deg,var(--cyan),var(--violet))}
+
+    /* Card design options (inspired by business-card-trends/) */
+    .cards-grid{margin-top:28px;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+    .cardopt .label{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
+    .cardopt .label b{font-family:var(--font-display);color:var(--ink);font-weight:600;font-size:.98rem}
+    .cardopt .label span{font-size:.72rem;color:var(--muted)}
+    .bizcard{aspect-ratio:85/55;border-radius:14px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 18px 40px rgba(0,0,0,.42)}
+    .bizcard .in{position:absolute;inset:0;padding:22px 24px;display:flex;flex-direction:column;color:#fff;z-index:1}
+    .bizcard .mk{width:42px;height:42px;flex:none}
+    .bizcard .wm{font-family:var(--font-display);font-weight:700;letter-spacing:.12em;font-size:1.6rem;line-height:1;color:#fff}
+    .bizcard .tag{font-size:.6rem;letter-spacing:.3em;font-weight:600;color:var(--cyan)}
+    .bizcard .foot{display:flex;justify-content:space-between;font-size:.64rem;color:#9DB2C9;letter-spacing:.05em;margin-top:auto}
+    .bizcard .lock{display:flex;align-items:center;gap:11px}
+    /* Back to black */
+    .v-black{background:#000915}
+    .v-black::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 80% at 100% 0%,color-mix(in srgb,var(--violet) 30%,transparent),transparent 55%),radial-gradient(60% 70% at 0% 100%,color-mix(in srgb,var(--cyan) 16%,transparent),transparent 55%)}
+    .v-black .in{justify-content:flex-end}
+    .v-black .lock{margin-bottom:7px}
+    /* Neon gradient */
+    .v-gradient{background:linear-gradient(135deg,var(--cyan),var(--violet))}
+    .v-gradient::after{content:"";position:absolute;inset:0;background:radial-gradient(85% 95% at 50% 125%,rgba(0,0,0,.4),transparent 60%)}
+    .v-gradient .in{align-items:center;justify-content:center;text-align:center;gap:10px}
+    .v-gradient .wm{text-shadow:0 1px 14px rgba(0,0,0,.28)}
+    .v-gradient .tag{color:#fff;opacity:.95}
+    /* Geometry */
+    .v-geo{background:#00070f}
+    .v-geo .frame{position:absolute;inset:14px;border:1px solid color-mix(in srgb,var(--cyan) 28%,transparent);border-radius:8px}
+    .v-geo .hex{position:absolute;top:-22px;right:-22px;width:130px;height:130px;opacity:.55;stroke:color-mix(in srgb,var(--cyan) 34%,transparent);stroke-width:2;fill:none}
+    .v-geo .in{justify-content:space-between}
+    .v-geo .row{display:flex;align-items:center;justify-content:space-between}
+    .v-geo .big{font-family:var(--font-display);font-weight:700;letter-spacing:.4em;font-size:1.7rem;text-align:center;color:#fff;padding-left:.4em}
+    /* On the edge (neon edge) */
+    .v-edge{background:#060e1c}
+    .v-edge::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(180deg,var(--cyan),var(--violet));box-shadow:0 0 24px color-mix(in srgb,var(--cyan) 70%,transparent)}
+    .v-edge .in{justify-content:flex-end;padding-left:36px}
+    .v-edge .lock{margin-bottom:7px}
+    /* QR */
+    .v-qr{background:#000915}
+    .v-qr .in{flex-direction:row;align-items:center;justify-content:space-between;gap:14px}
+    .v-qr .col{display:flex;flex-direction:column;gap:8px}
+    .v-qr .qrwrap{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none}
+    .v-qr .qr{width:96px;height:96px;border-radius:8px;background:#000915;border:1px solid rgba(255,255,255,.12);padding:6px}
+    .v-qr .qr img{width:100%;height:100%;display:block}
+    .v-qr .scan{font-size:.56rem;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
+    /* High contrast */
+    .v-contrast{background:var(--cyan)}
+    .v-contrast .in{justify-content:center}
+    .v-contrast .wm{font-size:2rem;color:#001018}
+    .v-contrast .rule2{width:46px;height:4px;border-radius:2px;background:#001018;margin:10px 0;opacity:.85}
+    .v-contrast .tag{color:#001018;opacity:.82}
+    .v-contrast .foot{color:#001018;opacity:.7}
+
+    .specs{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:.86rem}
+    .specs b{color:var(--ink);font-weight:600}
+    /* Dark/light toggle */
+    .theme-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:28px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;margin-left:8px}
+    .theme-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+    .theme-btn svg{width:16px;height:16px}
+    .theme-btn .sun{display:none}
+    :root.light .theme-btn .sun{display:block}
+    :root.light .theme-btn .moon{display:none}
+    .font-pick{display:inline-flex;align-items:center;gap:8px;margin-left:10px}
+    .font-pick select{background:var(--navy-2);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit;cursor:pointer}
+    .font-pick select:focus{outline:none;border-color:var(--cyan)}
+    .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+    .links a{color:var(--cyan);text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:7px 13px;font-size:.84rem;transition:border-color .2s}
+    .links a:hover{border-color:var(--cyan)}
+    footer{padding:40px 0 70px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+    .hint{font-size:.82rem;color:var(--muted);margin-top:10px}
+    @media (max-width:560px){ .opt .concept{max-width:140px} }
+  </style>
+</head>
+<body>
+  <!-- Inline mark library (palette-driven) -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1">
+        <stop class="s1" offset="0"/><stop class="s2" offset=".55"/><stop class="s3" offset="1"/>
+      </linearGradient>
+    </defs>
+    <symbol id="mark-loop" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="18" fill="none" stroke="url(#mg)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
+      <circle cx="50" cy="32" r="4.5" class="f-violet"/>
+    </symbol>
+    <symbol id="mark-duo" viewBox="0 0 64 64">
+      <path d="M32 14 A18 18 0 0 0 32 50" fill="none" class="st-cyan" stroke-width="7" stroke-linecap="round"/>
+      <path d="M32 14 A18 18 0 0 1 32 50" fill="none" class="st-violet" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="32" cy="32" r="3.5" class="f-bright"/>
+    </symbol>
+    <symbol id="mark-forward" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="18" fill="none" stroke="url(#mg)" stroke-width="6.5" stroke-linecap="round" pathLength="100" stroke-dasharray="82 100" transform="rotate(120 32 32)"/>
+      <path d="M27 23 L43 32 L27 41 Z" class="f-bright"/>
+    </symbol>
+    <symbol id="mark-orbit" viewBox="0 0 64 64">
+      <g class="st-faint" stroke-width="1.6"><line x1="32" y1="32" x2="51" y2="20"/><line x1="32" y1="32" x2="16" y2="22"/><line x1="32" y1="32" x2="24" y2="49"/></g>
+      <circle cx="32" cy="32" r="20" fill="none" class="st-faint" stroke-width="1.4" stroke-dasharray="2 7"/>
+      <circle cx="32" cy="32" r="7" fill="url(#mg)"/>
+      <circle cx="51" cy="20" r="3.6" class="f-cyan"/>
+      <circle cx="16" cy="22" r="3.2" class="f-violet"/>
+      <circle cx="24" cy="49" r="3.2" class="f-bright"/>
+    </symbol>
+    <symbol id="mark-hex" viewBox="0 0 64 64">
+      <polygon points="32,7 53,19.5 53,44.5 32,57 11,44.5 11,19.5" fill="none" stroke="url(#mg)" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M22 32 l7 7 13 -14" fill="none" class="st-bright" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">OBAS · Brand Kit</p>
+      <h1>Logos, business card &amp; mockups</h1>
+      <p class="lead">Five logo directions in the OBAS language. Pick a palette and everything —
+        UI, mockups, and the logos themselves — recolors. Pick a logo and it previews live on the
+        favicon, app icon, avatar, and business card. Everything is vector (SVG) and print-ready.</p>
+      <div class="palettes">
+        <span class="pl-label">Palette</span>
+        <button class="sw selected" data-pal="electric" style="--a:#00DCFA;--b:#7C5CFF" title="Electric" aria-label="Electric"></button>
+        <button class="sw" data-pal="blue" style="--a:#4F8BFF;--b:#7B6CF6" title="Blue Eclipse" aria-label="Blue Eclipse"></button>
+        <button class="sw" data-pal="teal" style="--a:#2DD4BF;--b:#38BDF8" title="Cool Revival" aria-label="Cool Revival"></button>
+        <button class="sw" data-pal="neon" style="--a:#00F5D4;--b:#C77DFF" title="Neon Noir" aria-label="Neon Noir"></button>
+        <button class="sw" data-pal="mono" style="--a:#9FB2C9;--b:#5E6E86" title="Salt &amp; Pepper" aria-label="Salt and Pepper"></button>
+        <button class="sw" data-pal="warm" style="--a:#E0A872;--b:#B45309" title="Urban Loft" aria-label="Urban Loft"></button>
+        <button class="sw" data-pal="sapphire" style="--a:#4DA3FF;--b:#E2683A" title="Sleek Sapphire" aria-label="Sleek Sapphire"></button>
+        <button class="sw" data-pal="citrus" style="--a:#B6F23D;--b:#E2620E" title="Striking Citrus" aria-label="Striking Citrus"></button>
+        <button class="sw" data-pal="rose" style="--a:#FF5C8A;--b:#3B6FD4" title="Rose &amp; Blueberry" aria-label="Rose and Blueberry"></button>
+        <button class="sw" data-pal="aurora" style="--a:#2EE6A6;--b:#1583C9" title="Modern Bloom" aria-label="Modern Bloom"></button>
+        <button class="sw" data-pal="gold" style="--a:#F4C04A;--b:#6D5DF6" title="Audacious Gold" aria-label="Audacious Gold"></button>
+        <button class="sw" data-pal="grape" style="--a:#A78BFA;--b:#D6447F" title="Grape Pop" aria-label="Grape Pop"></button>
+        <button class="theme-btn" data-theme aria-label="Toggle dark / light mode" title="Toggle dark / light">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        </button>
+        <label class="font-pick"><span class="pl-label">Font</span>
+          <select id="fontSel" aria-label="Choose font">
+            <option value="">Space Grotesk</option>
+            <option value="sora">Sora</option>
+            <option value="outfit">Outfit</option>
+            <option value="poppins">Poppins</option>
+            <option value="plex">IBM Plex Sans</option>
+            <option value="manrope">Manrope</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <!-- LOGO OPTIONS -->
+    <section>
+      <div class="rule"></div>
+      <h2 class="sec-h">Logo options</h2>
+      <p class="sub">Each is a distinct mark paired with the OBAS wordmark. Click to select.</p>
+      <div class="logos">
+        <div class="opt selected" data-mark="loop">
+          <div class="stage"><svg class="mk"><use href="#mark-loop"/></svg><span class="wm">OBAS</span></div>
+          <div class="meta"><div><div class="name">The Loop <span class="pill">signature</span></div><div class="concept">Open ring + node — the Build·Operate·Transform·Transfer loop.</div></div><div class="light"><svg class="mk"><use href="#mark-loop"/></svg></div></div>
+        </div>
+        <div class="opt" data-mark="duo">
+          <div class="stage"><svg class="mk"><use href="#mark-duo"/></svg><span class="wm">OBAS</span></div>
+          <div class="meta"><div><div class="name">Two-Tone O</div><div class="concept">Cyan→violet halves — one continuous, accountable loop.</div></div><div class="light"><svg class="mk"><use href="#mark-duo"/></svg></div></div>
+        </div>
+        <div class="opt" data-mark="forward">
+          <div class="stage"><svg class="mk"><use href="#mark-forward"/></svg><span class="wm">OBAS</span></div>
+          <div class="meta"><div><div class="name">Forward</div><div class="concept">Ring + play mark — momentum and execution.</div></div><div class="light"><svg class="mk"><use href="#mark-forward"/></svg></div></div>
+        </div>
+        <div class="opt" data-mark="hex">
+          <div class="stage"><svg class="mk"><use href="#mark-hex"/></svg><span class="wm">OBAS</span></div>
+          <div class="meta"><div><div class="name">Build Hex</div><div class="concept">Hexagon + check — built, operated, delivered.</div></div><div class="light"><svg class="mk"><use href="#mark-hex"/></svg></div></div>
+        </div>
+        <div class="opt" data-mark="orbit">
+          <div class="stage"><svg class="mk"><use href="#mark-orbit"/></svg><span class="wm">OBAS</span></div>
+          <div class="meta"><div><div class="name">Orbit</div><div class="concept">Core + connected nodes — the integrated network.</div></div><div class="light"><svg class="mk"><use href="#mark-orbit"/></svg></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK IN CONTEXT -->
+    <section>
+      <div class="rule"></div>
+      <h2 class="sec-h">The mark in context</h2>
+      <p class="sub">The selected mark, shown where a logo actually lives.</p>
+      <div class="context">
+        <div class="ctx"><div class="favicon"><svg class="mk mark-slot"><use href="#mark-loop"/></svg></div><small>Favicon 32px</small></div>
+        <div class="ctx"><div class="appicon"><svg class="mk mark-slot"><use href="#mark-loop"/></svg></div><small>App icon</small></div>
+        <div class="ctx"><div class="avatar"><svg class="mk mark-slot"><use href="#mark-loop"/></svg></div><small>Social avatar</small></div>
+        <div class="ctx"><div class="onlight"><svg class="mk mark-slot"><use href="#mark-loop"/></svg></div><small>On light</small></div>
+      </div>
+    </section>
+
+    <!-- BUSINESS CARD -->
+    <section>
+      <div class="rule"></div>
+      <h2 class="sec-h">Business card</h2>
+      <p class="sub">85 × 55 mm. Dark by default; flips with the dark/light toggle. Hover the cards. The mark reflects your selected logo and palette.</p>
+      <div class="stage-cards">
+        <div class="biz front">
+          <div class="pad">
+            <div class="lockup"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span class="wm">OBAS</span></div>
+            <div class="tag">DRIVING DIGITAL IMPACT</div>
+            <div class="foot"><span>obas.com</span><span>Riyadh · KSA</span></div>
+          </div>
+        </div>
+        <div class="biz back">
+          <div class="pad">
+            <div class="top"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span>OBAS</span></div>
+            <div class="bar"></div>
+            <div class="who">
+              <div class="nm">Full Name</div>
+              <div class="ti">Title / Role</div>
+              <div class="lines">
+                <span>+966 5X XXX XXXX</span>
+                <span>hello@obas.com</span>
+                <span>obas.com</span>
+                <span>Riyadh, Kingdom of Saudi Arabia</span>
+              </div>
+              <div class="bot">BUILD · OPERATE · TRANSFORM · TRANSFER</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="specs">
+        <span><b>Size</b> 85 × 55 mm (+3 mm bleed)</span>
+        <span><b>Stock</b> matte navy, soft-touch</span>
+        <span><b>Accent</b> cyan foil on the mark (optional)</span>
+        <span><b>Back text</b> white on navy, cyan rule</span>
+      </div>
+      <div class="links">
+        <a href="assets/card-front.svg" target="_blank" rel="noopener">↓ card-front.svg</a>
+        <a href="assets/card-back.svg" target="_blank" rel="noopener">↓ card-back.svg</a>
+        <a href="assets/mark-loop.svg" target="_blank" rel="noopener">↓ mark-loop.svg</a>
+        <a href="assets/mark-duo.svg" target="_blank" rel="noopener">↓ mark-duo.svg</a>
+        <a href="assets/mark-forward.svg" target="_blank" rel="noopener">↓ mark-forward.svg</a>
+        <a href="assets/mark-hex.svg" target="_blank" rel="noopener">↓ mark-hex.svg</a>
+        <a href="assets/mark-orbit.svg" target="_blank" rel="noopener">↓ mark-orbit.svg</a>
+      </div>
+      <p class="hint">Downloadable SVGs use the signature <b>Electric</b> palette (the canonical brand).
+        The on-page recolor is a preview; for a colored export in another palette, ask and I'll generate it.
+        Photoreal render prompts live in <code>brand-prompts.md</code>.</p>
+    </section>
+
+    <!-- CARD DESIGN OPTIONS -->
+    <section>
+      <div class="rule"></div>
+      <h2 class="sec-h">Card design options</h2>
+      <p class="sub">Six directions inspired by 2025 business-card trends — all in the OBAS system, so each follows your active palette, theme, font and logo.</p>
+      <div class="cards-grid">
+
+        <div class="cardopt">
+          <div class="label"><b>Back to Black</b><span>signature · dark</span></div>
+          <div class="bizcard v-black">
+            <div class="in">
+              <div class="lock"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span class="wm">OBAS</span></div>
+              <div class="tag">DRIVING DIGITAL IMPACT</div>
+              <div class="foot"><span>obas.com</span><span>Riyadh · KSA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardopt">
+          <div class="label"><b>Neon Gradient</b><span>futuristic</span></div>
+          <div class="bizcard v-gradient">
+            <div class="in">
+              <svg class="mk" viewBox="0 0 64 64"><circle cx="32" cy="32" r="18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/><circle cx="50" cy="32" r="4.5" fill="#fff"/></svg>
+              <span class="wm">OBAS</span>
+              <div class="tag">DRIVING DIGITAL IMPACT</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardopt">
+          <div class="label"><b>Geometry</b><span>minimal · precise</span></div>
+          <div class="bizcard v-geo">
+            <div class="frame"></div>
+            <svg class="hex" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 92,27 92,73 50,96 8,73 8,27"/></svg>
+            <div class="in">
+              <div class="row"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span class="tag">TECH · INNOVATION</span></div>
+              <div class="big">OBAS</div>
+              <div class="foot"><span>obas.com</span><span>Riyadh · KSA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardopt">
+          <div class="label"><b>On the Edge</b><span>neon edge</span></div>
+          <div class="bizcard v-edge">
+            <div class="in">
+              <div class="lock"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span class="wm">OBAS</span></div>
+              <div class="tag">DRIVING DIGITAL IMPACT</div>
+              <div class="foot"><span>obas.com</span><span>Riyadh · KSA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardopt">
+          <div class="label"><b>QR Code</b><span>phygital</span></div>
+          <div class="bizcard v-qr">
+            <div class="in">
+              <div class="col">
+                <div class="lock"><svg class="mk mark-slot"><use href="#mark-loop"/></svg><span class="wm" style="font-size:1.3rem">OBAS</span></div>
+                <div class="tag">DRIVING DIGITAL IMPACT</div>
+                <div class="foot" style="margin-top:10px"><span>obas.com</span></div>
+              </div>
+              <div class="qrwrap">
+                <div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=0&data=https%3A%2F%2Fobas.com&bgcolor=000915&color=ffffff" alt="QR code linking to obas.com" loading="lazy"></div>
+                <span class="scan">scan me</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardopt">
+          <div class="label"><b>High Contrast</b><span>bold accent</span></div>
+          <div class="bizcard v-contrast">
+            <div class="in">
+              <span class="wm">OBAS</span>
+              <div class="rule2"></div>
+              <div class="tag">DRIVING DIGITAL IMPACT</div>
+              <div class="foot"><span>obas.com</span><span>Riyadh · KSA</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="hint">Each follows the active palette, logo and font. The QR is a live code to obas.com (swap for your URL).
+        Want any of these as a print-ready SVG (front + back, 85×55 mm + bleed)? Tell me which and I'll export it.</p>
+    </section>
+
+    <footer>
+      © <span id="yr">2026</span> OBAS · Brand Kit. Replace the placeholder name, title and phone on the card back before printing.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var root = document.documentElement;
+
+    // Logo selection — swap which symbol the slots reference
+    var opts = document.querySelectorAll('[data-mark]');
+    var slotUses = document.querySelectorAll('.mark-slot use');
+    opts.forEach(function(opt){
+      opt.addEventListener('click', function(){
+        var id = opt.getAttribute('data-mark');
+        opts.forEach(function(o){ o.classList.toggle('selected', o === opt); });
+        slotUses.forEach(function(u){ u.setAttribute('href', '#mark-' + id); });
+      });
+    });
+
+    // Palette switch — recolors UI + every mark (they read --cyan/--bright/--violet)
+    var sws = document.querySelectorAll('.sw');
+    function setPalette(id){
+      if (id === 'electric') root.removeAttribute('data-palette'); else root.setAttribute('data-palette', id);
+      try { localStorage.setItem('obas-kit-palette', id); } catch(e){}
+      sws.forEach(function(s){ s.classList.toggle('selected', s.getAttribute('data-pal') === id); });
+    }
+    sws.forEach(function(s){ s.addEventListener('click', function(){ setPalette(s.getAttribute('data-pal')); }); });
+    var saved = (function(){ try { return localStorage.getItem('obas-kit-palette'); } catch(e){ return null; } })();
+    if (saved) setPalette(saved);
+
+    // Dark / light toggle
+    var themeBtn = document.querySelector('[data-theme]');
+    if (themeBtn) themeBtn.addEventListener('click', function(){
+      var light = root.classList.toggle('light');
+      try { localStorage.setItem('obas-kit-theme', light ? 'light' : 'dark'); } catch(e){}
+    });
+
+    // Font dropdown — sets the wordmark + all content font; shared with the site via localStorage('obas-font')
+    var fontSel = document.getElementById('fontSel');
+    if (fontSel) {
+      fontSel.value = root.getAttribute('data-font') || '';
+      fontSel.addEventListener('change', function(){
+        var v = fontSel.value;
+        if (v) root.setAttribute('data-font', v); else root.removeAttribute('data-font');
+        try { localStorage.setItem('obas-font', v); } catch(e){}
+      });
+    }
+  </script>
+</body>
+</html>

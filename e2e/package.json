@@ -1,0 +1,13 @@
+{
+  "name": "obas-e2e",
+  "private": true,
+  "description": "Playwright responsive/regression tests for the OBAS websites",
+  "scripts": {
+    "test": "playwright test",
+    "test:mobile": "playwright test --project=mobile",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}

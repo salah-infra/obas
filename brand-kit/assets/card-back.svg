@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550" width="850" height="550" role="img" aria-label="OBAS business card — back">
+  <defs>
+    <linearGradient id="markGb" x1="40" y1="40" x2="92" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DCFA"/><stop offset=".55" stop-color="#02E6F3"/><stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <radialGradient id="glowb" cx="0%" cy="100%" r="90%">
+      <stop offset="0" stop-color="#00DCFA" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#00DCFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ruleb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00DCFA"/><stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="550" fill="#000915"/>
+  <rect width="850" height="550" fill="url(#glowb)"/>
+
+  <!-- Mini lockup (top) -->
+  <g transform="translate(70,64) scale(0.95)">
+    <circle cx="32" cy="32" r="18" fill="none" stroke="url(#markGb)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
+    <circle cx="50" cy="32" r="4.5" fill="#7C5CFF"/>
+  </g>
+  <text x="148" y="108" font-family="'Space Grotesk','Sora',sans-serif" font-size="40" font-weight="700" letter-spacing="6" fill="#FFFFFF">OBAS</text>
+
+  <!-- Cyan rule -->
+  <rect x="70" y="170" width="4" height="250" rx="2" fill="url(#ruleb)"/>
+
+  <!-- Contact block -->
+  <text x="104" y="212" font-family="'Space Grotesk','Sora',sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">Full Name</text>
+  <text x="104" y="250" font-family="'Inter',sans-serif" font-size="24" font-weight="500" letter-spacing="1" fill="#00DCFA">Title / Role</text>
+
+  <g font-family="'Inter',sans-serif" font-size="24" font-weight="500" fill="#C9D6E5">
+    <text x="104" y="312">+966 5X XXX XXXX</text>
+    <text x="104" y="352">hello@obas.com</text>
+    <text x="104" y="392">obas.com</text>
+    <text x="104" y="432">Riyadh, Kingdom of Saudi Arabia</text>
+  </g>
+
+  <text x="780" y="500" text-anchor="end" font-family="'Inter',sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#00DCFA">BUILD · OPERATE · TRANSFORM · TRANSFER</text>
+</svg>

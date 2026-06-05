@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OBAS mark — Build hex">
+  <defs><linearGradient id="g5" x1="11" y1="14" x2="53" y2="50" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#00DCFA"/><stop offset="1" stop-color="#7C5CFF"/>
+  </linearGradient></defs>
+  <!-- Hexagon (build / BOT) with a forward check inside -->
+  <polygon points="32,7 53,19.5 53,44.5 32,57 11,44.5 11,19.5" fill="none" stroke="url(#g5)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M22 32 l7 7 13 -14" fill="none" stroke="#02E6F3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

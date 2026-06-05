@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OBAS — Driving Digital Impact</title>
+  <meta name="description" content="OBAS brand & web hub — the multi-page site, the one-page site (with Arabic), and the brand kit." />
+  <link rel="icon" href="site/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#000915;--navy-2:#0a1526;--line:#18263c;--cyan:#00DCFA;--bright:#02E6F3;--violet:#7C5CFF;--ink:#fff;--muted:#9DB2C9}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background-color:var(--navy);color:var(--muted);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+      background-image:radial-gradient(120% 70% at 50% -10%,rgba(2,230,243,.10),transparent 55%),radial-gradient(90% 60% at 100% 0%,rgba(124,92,255,.10),transparent 55%),radial-gradient(rgba(255,255,255,.035) 1px,transparent 1.4px);
+      background-size:auto,auto,34px 34px;background-attachment:fixed;display:flex;align-items:center}
+    .wrap{max-width:1040px;margin:0 auto;padding:72px 24px}
+    h1,h2,.display{font-family:'Space Grotesk','Sora',sans-serif;color:var(--ink);letter-spacing:-.01em;margin:0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:42px;height:42px}
+    .brand .wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.7rem;letter-spacing:.18em;color:#fff}
+    .eyebrow{font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:600;color:var(--cyan);margin:30px 0 12px}
+    h1{font-size:clamp(2.1rem,5.5vw,3.6rem);font-weight:700;line-height:1.05}
+    .grad{background:linear-gradient(100deg,var(--cyan),var(--bright) 45%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{margin-top:16px;max-width:620px;font-size:1.06rem;line-height:1.7}
+    .grid{margin-top:40px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:26px;text-decoration:none;color:inherit;
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));transition:border-color .2s,transform .2s,box-shadow .2s}
+    .card:hover{border-color:rgba(0,220,250,.45);transform:translateY(-3px);box-shadow:0 16px 44px rgba(0,220,250,.08)}
+    .card .k{font-family:'Space Grotesk',sans-serif;color:#fff;font-weight:600;font-size:1.18rem;display:flex;align-items:center;gap:8px}
+    .card p{margin:8px 0 0;font-size:.92rem;line-height:1.6}
+    .card .go{margin-top:18px;color:var(--cyan);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:6px}
+    .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+    footer{margin-top:46px;color:var(--muted);font-size:.84rem}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#00DCFA"/><stop offset=".55" stop-color="#02E6F3"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs>
+        <circle cx="32" cy="32" r="18" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
+        <circle cx="50" cy="32" r="4.5" fill="#7C5CFF"/>
+      </svg>
+      <span class="wm">OBAS</span>
+    </div>
+
+    <p class="eyebrow">Brand &amp; Web Hub</p>
+    <h1>Driving <span class="grad">Digital Impact</span></h1>
+    <p class="lead">OBAS unites strategic advisory, technology development, AI-driven innovation, and operational
+      execution in one accountable model. Explore the work below.</p>
+
+    <div class="grid">
+      <a class="card" href="site/index.html">
+        <span class="k">Website</span>
+        <p>The full multi-page site — home, capabilities, about, case studies, and contact.</p>
+        <div class="tags"><span class="tag">5 pages</span><span class="tag">12 palettes</span><span class="tag">dark / light</span></div>
+        <span class="go">Open →</span>
+      </a>
+      <a class="card" href="site-onepage/index.html">
+        <span class="k">One-page site</span>
+        <p>A single-scroll version with anchor navigation — plus a full Arabic (RTL) edition.</p>
+        <div class="tags"><span class="tag">one scroll</span><span class="tag">عربي / EN</span></div>
+        <span class="go">Open →</span>
+      </a>
+      <a class="card" href="brand-kit/index.html">
+        <span class="k">Brand kit</span>
+        <p>Logo options, business-card designs and mockups — with live palette, theme, font &amp; logo switches.</p>
+        <div class="tags"><span class="tag">5 logos</span><span class="tag">6 card designs</span></div>
+        <span class="go">Open →</span>
+      </a>
+    </div>
+
+    <footer>© <span id="yr">2026</span> OBAS · Riyadh, Kingdom of Saudi Arabia</footer>
+  </main>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
