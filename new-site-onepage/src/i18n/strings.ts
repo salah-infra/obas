@@ -33,7 +33,7 @@ export const en: Strings = {
   },
   bot: {
     eyebrow: 'Transformation, done right',
-    title: 'BUILD · OPERATE · TRANSFER',
+    title: 'BUILD · OPERATE · TRANSFORM · TRANSFER',
     steps: [
       { word: 'Build', note: 'with excellence' },
       { word: 'Operate', note: 'with accountability' },
@@ -150,7 +150,7 @@ export const ar: Strings = {
   },
   bot: {
     eyebrow: 'التحوّل كما يجب أن يكون',
-    title: 'نبني · نُشغّل · نُسلّم',
+    title: 'نبني · نُشغّل · نُحوّل · نُسلّم',
     steps: [
       { word: 'نبني', note: 'بإتقان' },
       { word: 'نُشغّل', note: 'بمسؤولية' },
