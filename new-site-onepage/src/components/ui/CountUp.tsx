@@ -7,7 +7,8 @@ export function CountUp({ to, className }: { to: number; className?: string }) {
   const reduce = useReducedMotion()
   const [n, setN] = useState(reduce ? to : 0)
   useEffect(() => {
-    if (!inView || reduce) { setN(to); return }
+    if (reduce) { setN(to); return }
+    if (!inView) return
     const start = performance.now()
     const dur = 1400
     let raf = 0
