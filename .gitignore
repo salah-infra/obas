@@ -16,3 +16,5 @@ business-card-trends/
 .DS_Store
 Thumbs.db
 *.log
+
+.superpowers/
