@@ -74,9 +74,9 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color .3s var(--ease), color .3s var(--ease);
 }
-h1,h2,h3,h4,.display { font-family: var(--font-display); color: var(--ink); }
-.display { font-family: var(--font-display); }
+h1,h2,h3,h4,.display { font-family: var(--font-display); color: var(--ink); letter-spacing: -0.01em; }
 .eyebrow { color: var(--eyebrow); font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; }
 .grad-text { background: linear-gradient(100deg, var(--cyan), var(--bright-cyan) 45%, var(--violet)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 :root.light .text-white { color: var(--ink); }
