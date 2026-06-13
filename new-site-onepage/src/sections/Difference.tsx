@@ -17,7 +17,7 @@ export function Difference() {
           {t.bot.steps.map((s, i) => (
             <h2 key={i} className="display text-4xl font-bold leading-none sm:text-6xl md:text-7xl" style={{ color: 'var(--ink)' }}>
               <span className={i === t.bot.steps.length - 1 ? 'grad-text' : ''}>{s.word}.</span>
-              <span className="ml-4 align-middle text-base font-normal sm:text-lg" style={{ color: 'var(--muted)' }}>{s.note}</span>
+              <span className="ms-4 align-middle text-base font-normal sm:text-lg" style={{ color: 'var(--muted)' }}>{s.note}</span>
             </h2>
           ))}
         </motion.div>

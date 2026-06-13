@@ -17,13 +17,13 @@ export function Contact() {
               <p className="mt-6 text-lg" style={{ color: 'var(--muted)' }}>{t.dir === 'rtl' ? '✓ شكراً لك — سنتواصل معك قريباً.' : '✓ Thank you — we\'ll be in touch.'}</p>
             ) : (
               <form className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
-                <input required name="name" autoComplete="name" placeholder={t.contact.namePh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)]" style={inputStyle} />
-                <input name="organization" autoComplete="organization" placeholder={t.contact.orgPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)]" style={inputStyle} />
-                <input required type="email" name="email" autoComplete="email" dir="ltr" placeholder={t.contact.emailPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)] sm:col-span-2" style={inputStyle} />
-                <select name="sector" className="rounded-lg border px-3 py-2.5 text-sm outline-none sm:col-span-2" style={inputStyle}>
+                <input required name="name" autoComplete="name" aria-label={t.contact.namePh} placeholder={t.contact.namePh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)]" style={inputStyle} />
+                <input name="organization" autoComplete="organization" aria-label={t.contact.orgPh} placeholder={t.contact.orgPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)]" style={inputStyle} />
+                <input required type="email" name="email" autoComplete="email" dir="ltr" aria-label={t.contact.emailPh} placeholder={t.contact.emailPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)] sm:col-span-2" style={inputStyle} />
+                <select name="sector" aria-label={t.nav.solutions} className="rounded-lg border px-3 py-2.5 text-sm outline-none sm:col-span-2" style={inputStyle}>
                   {t.solutions.tabs.map(tb => <option key={tb.id} value={tb.label}>{tb.label}</option>)}
                 </select>
-                <textarea required name="message" rows={5} placeholder={t.contact.msgPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)] sm:col-span-2" style={inputStyle} />
+                <textarea required name="message" rows={5} aria-label={t.contact.msgPh} placeholder={t.contact.msgPh} className="rounded-lg border px-3 py-2.5 text-sm outline-none focus:border-[color:var(--cyan)] sm:col-span-2" style={inputStyle} />
                 <div className="sm:col-span-2"><Button as="button" type="submit">{t.contact.submit}</Button></div>
               </form>
             )}

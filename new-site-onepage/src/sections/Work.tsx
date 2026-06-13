@@ -12,7 +12,7 @@ export function Work() {
           {t.work.items.map((w, i) => (
             <Reveal key={i} delay={i * 0.08}>
               <SpotlightCard className="h-full !p-0">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden rounded-t-2xl">
                   <img src={w.img} alt={w.title} loading="lazy" className="aspect-[16/10] w-full object-cover" />
                 </div>
                 <div className="p-6">
