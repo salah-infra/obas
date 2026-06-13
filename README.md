@@ -19,6 +19,7 @@ AI-driven innovation, and operational execution in one integrated model.
 | [`brand-prompt-outputs.md`](brand-prompt-outputs.md) | Executed outputs of those prompts: identity, logo/card prompts, flyer copy, website structure |
 | [`site/`](site/) | The built 5-page website (HTML + Tailwind) and brand SVG assets. Open `site/index.html` |
 | [`site-onepage/`](site-onepage/) | Single-page variant with anchor nav (`index.html`) + a full **Arabic RTL** version (`ar.html`) with an عربي/EN switch |
+| [`new-site-onepage/`](new-site-onepage/) | React + Vite + Motion rebuild of the one-pager — Aurora hero, bento grid, full theming (light/dark · 12 palettes · fonts) and an Arabic `/ar` route. The only built sub-project: `cd new-site-onepage && npm install && npm run dev`. |
 | [`brand-kit/`](brand-kit/) | Logo options (5 SVG marks), print-ready business card (front/back SVG), and a showcase/mockup page. Open `brand-kit/index.html` |
 | [`e2e/`](e2e/) | Playwright responsive/regression tests (mobile · tablet · desktop). `cd e2e && npm test` |
 

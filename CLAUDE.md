@@ -155,6 +155,28 @@ The hero is inlined and all systems (theme toggle, palette picker, motion, count
 work identically. Two shared helpers in `obas.js`/`obas.css` support it: `scroll-margin-top`
 on `section[id]` (clears the fixed nav) and auto-closing the mobile menu on anchor-link tap.
 
+### React one-page variant (`new-site-onepage/`)
+
+The **only built sub-project** in this otherwise-buildless repo. Stack: Vite + React 18 +
+TypeScript + Tailwind v4 (`@tailwindcss/vite`) + Motion (`motion/react`) + react-router-dom.
+Run: `cd new-site-onepage && npm install && npm run dev`; production build: `npm run build`.
+It has its own `README.md`. Playwright e2e is **not yet wired** for it — the existing `e2e/`
+suite covers the buildless sites only.
+
+- **Routes:** `/` (English) and `/ar` (Arabic RTL) share section components. All copy lives in
+  `src/i18n/strings.ts` (typed `en` + `ar` objects for parity). The `/ar` route sets
+  `lang="ar" dir="rtl"` pre-paint via `index.html` + a React effect on mount.
+- **Theming:** brand tokens are ported from `site-onepage/assets/obas.css` into `src/index.css`
+  — edit colors there and re-port when the canonical tokens change. Light/dark toggle, 12-palette
+  picker, and font switch all persist under the **same `localStorage` keys** (`obas-theme` /
+  `obas-palette` / `obas-font`) used by `site/` and `site-onepage/`, so preference changes in one
+  sub-project carry over to the others.
+- **Motion:** all animations are gated inside `@media (prefers-reduced-motion: no-preference)`;
+  reduced-motion users get the static, fully-visible layout automatically.
+- **Self-contained:** assets are copied into `new-site-onepage/public/`. Changes to shared brand
+  tokens or SVG assets must be re-ported/re-copied — this project does **not** share files with
+  `site/` or `site-onepage/`.
+
 When editing, keep a fact in its owning file and link to it from others (the existing docs
 link via relative Markdown paths, e.g. `[\`case-studies.md\`](case-studies.md)`). Avoid
 restating the same claim in multiple files — it creates drift.
