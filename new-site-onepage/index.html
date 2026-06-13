@@ -12,6 +12,7 @@
         if (localStorage.getItem('obas-theme') === 'light') d.classList.add('light');
         var p = localStorage.getItem('obas-palette'); if (p) d.setAttribute('data-palette', p);
         var f = localStorage.getItem('obas-font'); if (f) d.setAttribute('data-font', f);
+        if (location.pathname === '/ar' || location.pathname.indexOf('/ar/') === 0 || location.pathname.indexOf('/ar') === 0) { d.lang = 'ar'; d.dir = 'rtl'; }
       } catch (e) {}
     </script>
   </head>
