@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBAS — Driving Digital Impact</title>
+    <meta name="description" content="OBAS is an integrated transformation partner — strategy, technology, AI, and operations under one accountable model. We build it, operate it, and transfer a proven, scalable system." />
+    <script>
+      try {
+        var d = document.documentElement;
+        if (localStorage.getItem('obas-theme') === 'light') d.classList.add('light');
+        var p = localStorage.getItem('obas-palette'); if (p) d.setAttribute('data-palette', p);
+        var f = localStorage.getItem('obas-font'); if (f) d.setAttribute('data-font', f);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
