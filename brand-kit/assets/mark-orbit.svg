@@ -1,16 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="OBAS mark — Orbit">
   <defs><linearGradient id="g4" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#00DCFA"/><stop offset="1" stop-color="#7C5CFF"/>
+    <stop offset="0" stop-color="#00DCFA"/><stop offset=".55" stop-color="#02E6F3"/><stop offset="1" stop-color="#7C5CFF"/>
   </linearGradient></defs>
-  <!-- Network/orbit: one accountable core with connected nodes -->
+  <!-- Network: one accountable core, three connected nodes -->
   <g stroke="#27405e" stroke-width="1.6">
-    <line x1="32" y1="32" x2="51" y2="20"/>
-    <line x1="32" y1="32" x2="16" y2="22"/>
-    <line x1="32" y1="32" x2="24" y2="49"/>
+    <line x1="32" y1="32" x2="53" y2="16"/>
+    <line x1="32" y1="32" x2="30" y2="53"/>
+    <line x1="32" y1="32" x2="14" y2="30"/>
   </g>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="#1b3a57" stroke-width="1.4" stroke-dasharray="2 7"/>
   <circle cx="32" cy="32" r="7" fill="url(#g4)"/>
-  <circle cx="51" cy="20" r="3.6" fill="#00DCFA"/>
-  <circle cx="16" cy="22" r="3.2" fill="#7C5CFF"/>
-  <circle cx="24" cy="49" r="3.2" fill="#02E6F3"/>
+  <circle cx="53" cy="16" r="3.8" fill="#00DCFA"/>
+  <circle cx="30" cy="53" r="3.2" fill="#7C5CFF"/>
+  <circle cx="14" cy="30" r="3" fill="#02E6F3"/>
 </svg>

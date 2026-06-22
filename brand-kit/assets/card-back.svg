@@ -1,39 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550" width="850" height="550" role="img" aria-label="OBAS business card — back">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600" role="img" aria-label="OBAS business card — back">
   <defs>
-    <linearGradient id="markGb" x1="40" y1="40" x2="92" y2="92" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00DCFA"/><stop offset=".55" stop-color="#02E6F3"/><stop offset="1" stop-color="#7C5CFF"/>
-    </linearGradient>
-    <radialGradient id="glowb" cx="0%" cy="100%" r="90%">
-      <stop offset="0" stop-color="#00DCFA" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#00DCFA" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="ruleb" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#00DCFA"/><stop offset="1" stop-color="#7C5CFF"/>
-    </linearGradient>
+    <linearGradient id="orbCore" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E0A872"/><stop offset=".55" stop-color="#F0C9A0"/><stop offset="1" stop-color="#B45309"/></linearGradient>
+    <radialGradient id="glowTR" cx="100%" cy="0%" r="78%"><stop offset="0" stop-color="#E0A872" stop-opacity="0.26"/><stop offset="1" stop-color="#E0A872" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBL" cx="0%" cy="100%" r="70%"><stop offset="0" stop-color="#B45309" stop-opacity="0.16"/><stop offset="1" stop-color="#B45309" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="850" height="550" fill="#000915"/>
-  <rect width="850" height="550" fill="url(#glowb)"/>
-
-  <!-- Mini lockup (top) -->
-  <g transform="translate(70,64) scale(0.95)">
-    <circle cx="32" cy="32" r="18" fill="none" stroke="url(#markGb)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="78 100" transform="rotate(-6 32 32)"/>
-    <circle cx="50" cy="32" r="4.5" fill="#7C5CFF"/>
+  <rect width="1050" height="600" fill="#05080f"/>
+  <rect width="1050" height="600" fill="url(#glowBL)"/>
+  <rect width="1050" height="600" fill="url(#glowTR)"/>
+  <g transform="translate(477,150) scale(1.5)">
+    <g stroke="#6f5a3c" stroke-width="1.6"><line x1="32" y1="32" x2="53" y2="16"/><line x1="32" y1="32" x2="30" y2="53"/><line x1="32" y1="32" x2="14" y2="30"/></g>
+    <circle cx="32" cy="32" r="7" fill="url(#orbCore)"/>
+    <circle cx="53" cy="16" r="3.8" fill="#E0A872"/><circle cx="30" cy="53" r="3.2" fill="#C2603F"/><circle cx="14" cy="30" r="3" fill="#F0C9A0"/>
   </g>
-  <text x="148" y="108" font-family="'Space Grotesk','Sora',sans-serif" font-size="40" font-weight="700" letter-spacing="6" fill="#FFFFFF">OBAS</text>
-
-  <!-- Cyan rule -->
-  <rect x="70" y="170" width="4" height="250" rx="2" fill="url(#ruleb)"/>
-
-  <!-- Contact block -->
-  <text x="104" y="212" font-family="'Space Grotesk','Sora',sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">Full Name</text>
-  <text x="104" y="250" font-family="'Inter',sans-serif" font-size="24" font-weight="500" letter-spacing="1" fill="#00DCFA">Title / Role</text>
-
-  <g font-family="'Inter',sans-serif" font-size="24" font-weight="500" fill="#C9D6E5">
-    <text x="104" y="312">+966 5X XXX XXXX</text>
-    <text x="104" y="352">hello@obas.com</text>
-    <text x="104" y="392">obas.com</text>
-    <text x="104" y="432">Riyadh, Kingdom of Saudi Arabia</text>
-  </g>
-
-  <text x="780" y="500" text-anchor="end" font-family="'Inter',sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#00DCFA">BUILD · OPERATE · TRANSFORM · TRANSFER</text>
+  <text x="525" y="372" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="96" font-weight="700" letter-spacing="8" fill="#FFFFFF">OBAS<tspan font-size="46" font-weight="600" letter-spacing="0" fill="#C2603F">.tech</tspan></text>
+  <text x="525" y="416" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="22" font-weight="600" letter-spacing="9" fill="#E0A872">DRIVING DIGITAL IMPACT</text>
 </svg>

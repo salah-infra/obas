@@ -76,8 +76,9 @@ test.describe('mobile menu', () => {
     await page.locator('[data-nav-toggle]').click();
     await expect(menu).toBeVisible();
 
-    await expect(page.locator('[data-nav-menu] [data-theme-toggle]')).toHaveCount(1);
-    await expect(page.locator('[data-nav-menu] [data-palette-toggle]')).toHaveCount(1);
+    // The one-pager is locked to a single theme (dark, Urban Loft, IBM Plex) — no theme/palette controls.
+    await expect(page.locator('[data-nav-menu] [data-theme-toggle]')).toHaveCount(0);
+    await expect(page.locator('[data-nav-menu] [data-palette-toggle]')).toHaveCount(0);
 
     await page.locator('[data-nav-menu] a[href^="#"]').first().click();
     await expect(menu).toBeHidden();

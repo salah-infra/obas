@@ -28,25 +28,34 @@ facet of the identity and they cross-reference each other rather than duplicate:
 
 ## The brand kit (`brand-kit/`)
 
-`brand-kit/index.html` is a self-contained showcase (own CSS, no Tailwind) presenting five logo
-options and a business card. The five marks are standalone SVGs in `brand-kit/assets/`
-(`mark-loop` = signature, `mark-duo`, `mark-forward`, `mark-hex`, `mark-orbit`). The page has an
-interactive picker: clicking an option swaps every `[data-mark-slot]` (favicon/app-icon/avatar/
-on-light previews and the business-card mark) to that mark via JS. The business card is rendered
-in HTML/CSS for font fidelity (3D-tilt mockup); the print-ready versions are `card-front.svg` and
-`card-back.svg` (85×55mm, placeholder name/title/phone on the back — replace before printing).
-A **"Card design options"** section offers 6 CSS card designs inspired by `business-card-trends/`
-(Back to Black, Neon Gradient, Geometry, On the Edge, QR Code, High Contrast) via `.bizcard.v-*`
-classes — all palette/theme/font/logo-aware (the QR is a live api.qrserver.com code to obas.com).
-Only `card-front/back.svg` are export-ready so far; ask to export any `v-*` design as print SVG.
-**Palette switch + dark/light toggle:** the page has the same 6-palette switcher and a sun/moon
-dark-light toggle (both persist to `localStorage` `obas-kit-palette` / `obas-kit-theme`, applied
-pre-paint). Light mode (`:root.light`) re-themes the page chrome and the business card (its own
-`--card-*` tokens flip to a white card with dark ink); only the app-icon/avatar tiles stay dark
-by design (they demo the mark in a dark context). The logos recolor with the palette — so the marks are **inline `<symbol>`s** (in a hidden `<svg>` at the top of the body)
-whose strokes/fills read `var(--cyan)/--bright/--violet`; the slots use `<use href="#mark-…">`
-and selection swaps the href. The standalone `assets/mark-*.svg` files keep hardcoded Electric
-colors (canonical brand) for download. Photoreal render prompts live in `brand-prompts.md`.
+`brand-kit/index.html` is a self-contained showcase (own CSS, no Tailwind) presenting the **founder
+business cards**. The kit is **locked** (no switchers): the **Orbit** mark, the **Urban Loft**
+palette (`--cyan:#E0A872 … --violet:#B45309`, hardcoded in `:root`), and **IBM Plex Sans** —
+matching the website. Cards are **US standard 3.5 × 2 in** (`aspect-ratio:3.5/2`; print viewBox
+`1050×600`). The page shows **one shared back** (in `.stage-cards`) plus a **flat grid of one front
+per founder** (`.front-grid` of `.cardfig` figures): Omar Alaqra (CEO), Abdullah Nazzal (CTO),
+M. Borini (CBO), Mohamad Salah Olabi (COO) — all **Co-Founder**.
+  The wordmark is `OBAS.tech` — the `.tech` rendered as a smaller suffix (`.wm .tld` span /
+  `<tspan>` in the SVGs), amber on the front, dark-copper on the back.
+- **Front** — light (white) card, left amber accent bar. Two-column body: left = Orbit mark +
+  `OBAS.tech`, name, title, and a label/value contact grid (country labels in a muted column so the
+  numbers align; 1–3 numbers + email); right = a divider + **QR code** (scan → obas.tech) with a
+  `SCAN · OBAS.TECH` label. The `BUILD · OPERATE · TRANSFORM · TRANSFER` line spans the full width at
+  the bottom. The front Orbit mark is a shared inline `<symbol id="frontMark">` reused via `<use>`
+  (one gradient `#orbFg`, no duplicate ids). In the print SVG the QR is embedded as a base64 data URI
+  (self-contained); on the HTML page it's an `api.qrserver.com` `<img>`.
+- **Back** — "Back to Black": near-black (`#05080f`) card with a warm amber radial glow (top-right)
+  and the centred Neon-Gradient layout — Urban Loft Orbit mark, white `OBAS` + copper `.tech`, and
+  the amber `DRIVING DIGITAL IMPACT` tagline. (Inlined directly, single instance.)
+
+The print-ready exports are one front per founder — `assets/card-front-{omar,abdullah,borini,salah}.svg`
+— plus the shared `assets/card-back.svg` (all US 3.5×2in, viewBox `1050×600`), kept in sync with the
+on-page mockup. **Note:** standalone SVGs must use literal `—`/`·` characters, not `&mdash;`/`&middot;`
+entities (only XML's five named entities are valid, else the file fails to parse). The five standalone
+`assets/mark-*.svg` files (incl. `mark-orbit.svg`, the chosen mark) still keep hardcoded Electric
+colors as canonical downloads. The earlier logo-picker, palette/theme/font switchers, mark-in-context
+tiles, and the 6 `.bizcard.v-*` trend designs were removed when the brand was finalized.
+Photoreal render prompts live in `brand-prompts.md`.
 
 ## The website (`site/`)
 
@@ -151,9 +160,18 @@ A single-scroll version of the same site: nav links are in-page anchors (`#capab
 `#solutions`, `#work`, `#about`, `#contact`) instead of separate pages. It has its **own copy**
 of `assets/` (CSS/JS/SVG) — it is self-contained, so a shared-asset change must be copied to
 both `site/assets/` and `site-onepage/assets/` (`cp -R site/assets site-onepage/assets`).
-The hero is inlined and all systems (theme toggle, palette picker, motion, count-up, tabs)
-work identically. Two shared helpers in `obas.js`/`obas.css` support it: `scroll-margin-top`
-on `section[id]` (clears the fixed nav) and auto-closing the mobile menu on anchor-link tap.
+The hero is inlined; motion, count-up, and tabs work identically. Two shared helpers in
+`obas.js`/`obas.css` support it: `scroll-margin-top` on `section[id]` (clears the fixed nav) and
+auto-closing the mobile menu on anchor-link tap.
+
+**The one-pager is finalized/locked** (unlike `site/`, which keeps the full switchers): it uses the
+**Orbit** logo, the **Urban Loft** palette (set as the base `:root` accents — no `data-palette`),
+and **IBM Plex Sans** (`--font-display`/`--font-body`). The palette picker, font selector, and
+light/dark theme toggle were removed from `site-onepage/` (markup, `obas.js`, and the pre-paint head
+script) — it is dark-only. The nav/footer/favicon all use the Orbit mark (`logo-icon.svg` /
+`favicon.svg` recolored to Urban Loft; the nav SVG reads the palette vars). So a "shared-asset"
+sync from `site/assets/` is **no longer a blind copy** — `site-onepage/assets/obas.css|js`,
+`logo-icon.svg`, `favicon.svg` have diverged on purpose; merge by hand.
 
 When editing, keep a fact in its owning file and link to it from others (the existing docs
 link via relative Markdown paths, e.g. `[\`case-studies.md\`](case-studies.md)`). Avoid
