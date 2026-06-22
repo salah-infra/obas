@@ -1,18 +1,45 @@
 import { motion, useReducedMotion } from 'motion/react'
 import type { ReactNode } from 'react'
 
-export function Marquee({ items, className = '' }: { items: ReactNode[]; className?: string }) {
+export function Marquee({
+  items,
+  className = '',
+  reverse = false,
+  speed = 28,
+}: {
+  items: ReactNode[]
+  className?: string
+  reverse?: boolean
+  speed?: number
+}) {
   const reduce = useReducedMotion()
-  const row = (
-    <div className="flex shrink-0 items-center gap-10 px-5">
-      {items.map((it, i) => <span key={i} className="text-sm tracking-wide" style={{ color: 'var(--muted)' }}>{it}</span>)}
-    </div>
+
+  const cell = (it: ReactNode, key: number) => (
+    <span key={key} className="flex items-center whitespace-nowrap">
+      <span className="px-6" style={{ color: 'var(--muted)' }}>{it}</span>
+      <span aria-hidden className="text-[0.55em]" style={{ color: 'var(--cyan)' }}>◆</span>
+    </span>
   )
-  if (reduce) return <div className={`flex flex-wrap justify-center gap-x-10 gap-y-2 ${className}`}>{row}</div>
+
+  if (reduce) {
+    return <div className={`flex flex-wrap items-center justify-center ${className}`}>{items.map(cell)}</div>
+  }
+
+  // Repeat the items enough times that a single group is wider than any viewport,
+  // so the two-group track never leaves a bare edge while looping at -50%.
+  const reps = Math.max(2, Math.ceil(16 / Math.max(1, items.length)))
+  const repeated = Array.from({ length: reps }).flatMap(() => items)
+  const group = <div className="flex w-max shrink-0 items-center">{repeated.map(cell)}</div>
+
   return (
     <div className={`relative flex overflow-hidden ${className}`}>
-      <motion.div className="flex" animate={{ x: ['0%', '-50%'] }} transition={{ duration: 28, ease: 'linear', repeat: Infinity }}>
-        {row}{row}
+      <motion.div
+        className="flex w-max"
+        animate={{ x: reverse ? ['-50%', '0%'] : ['0%', '-50%'] }}
+        transition={{ duration: speed, ease: 'linear', repeat: Infinity }}
+      >
+        {group}
+        {group}
       </motion.div>
     </div>
   )

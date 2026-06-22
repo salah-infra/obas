@@ -84,3 +84,47 @@ h1,h2,h3,h4,.display { font-family: var(--font-display); color: var(--ink); lett
 /* RTL: Arabic fonts + eyebrow casing (activated only on dir=rtl) */
 [dir="rtl"] { --font-display: 'Cairo', sans-serif; --font-body: 'IBM Plex Sans Arabic', sans-serif; }
 [dir="rtl"] .eyebrow { text-transform: none; letter-spacing: 0; }
+
+/* ============================================================
+   MOTION / DENSITY LAYER — animated backdrop, grid, chips, borders
+   ============================================================ */
+@property --gborder-ang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes gborder-spin { to { --gborder-ang: 360deg; } }
+@keyframes fx-pan { from { background-position: 0 0; } to { background-position: 64px 64px; } }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+/* faint moving grid used in the backdrop + hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--cyan) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--cyan) 8%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+@media (prefers-reduced-motion: no-preference) { .fx-grid { animation: fx-pan 7s linear infinite; } }
+
+/* accent icon chip */
+.icon-chip {
+  display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 0.85rem;
+  color: var(--cyan);
+  background: color-mix(in srgb, var(--cyan) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cyan) 30%, transparent);
+}
+.icon-chip svg { width: 1.35rem; height: 1.35rem; }
+
+/* pill */
+.chip {
+  display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .85rem; border-radius: 999px;
+  font-size: .8rem; color: var(--ink); border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface-2) 75%, transparent); backdrop-filter: blur(6px);
+}
+
+/* rotating gradient border (wrap a card; add .spin to animate) */
+.gborder { position: relative; }
+.gborder::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: conic-gradient(from var(--gborder-ang), var(--cyan), var(--violet), var(--bright-cyan), var(--cyan));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: .55;
+}
+@media (prefers-reduced-motion: no-preference) { .gborder.spin::before { animation: gborder-spin 6s linear infinite; } }
