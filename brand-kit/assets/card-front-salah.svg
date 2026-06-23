@@ -22,6 +22,5 @@
   <line x1="690" y1="96" x2="690" y2="504" stroke="#ecdfcd" stroke-width="1.5"/>
   <rect x="740" y="210" width="180" height="180" rx="16" fill="#ffffff" stroke="#e6d8c6" stroke-width="1.5"/>
   <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFAAQMAAAD3XjfpAAAABlBMVEX///8KGi9DqZEqAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOklEQVRoge3Zu7GDMBCF4WUIHLoESqE0KI1SVIJDB4z36rGShQn8kLlO/hMx0kemkbQr0TqLiEwqKafNlACBDfAmOYOHk87p39XDS5kCAlthH2cuEcZ0BQ5xagYCvwontQCBx8FwutpOCAT+BObkhVvtjzlAYBusY7e9sETXJ9UHEPgG3CXWrgE+CxD4MiwLLh+ltu2pXuWszvZCIPB/oOXsZ5yMfnecAlztCngPEPgdWMa68un81FgxIPBzeLLRMcGQ3m97UmpXILAJ6jZxrIt3vdwiWWRfuwKBx8CHWJErm2N4BgLboNaxlt2dOSnHMBDYALed4ZhUVFyrKyAQ2Ap3767bzrD9DQT+CGppIA9WkgCBB0C19ehEYh8PCGyFOUN+d0157KUAgZ/DOkuuXfuyHvcPYkDgYfAPQNwnK1a7f4AAAAAASUVORK5CYII=" x="752" y="222" width="156" height="156"/>
-  <text x="830" y="424" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#7c8ca0">SCAN · OBAS.TECH</text>
   <text x="80" y="556" font-family="'IBM Plex Sans',sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#B45309">BUILD · OPERATE · TRANSFORM · TRANSFER</text>
 </svg>
